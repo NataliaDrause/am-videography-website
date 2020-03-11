@@ -1,0 +1,22 @@
+.instagram {
+    margin: 7rem auto;
+    text-align: center;
+    //width: 1000px;
+
+    &__grid {
+        margin: 5rem 0;
+        display: grid;
+        grid-template-columns: repeat(5, 20vw);
+        grid-template-rows: 20vw;
+
+        &__pic {
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    } 
+}

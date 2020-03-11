@@ -1,0 +1,134 @@
+//HEADINGS
+h2 {
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 1.5;
+    letter-spacing: 0.06rem;
+    color: $color-grey-dark;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 1.5;
+    letter-spacing: 0.04rem; 
+}
+
+.h3--dark {
+    color: $color-black;
+}
+
+.h3--light {
+    color: $color-white;
+    //text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+a {
+    text-decoration: none;
+    font-family: $font-primary;
+    color: inherit;
+    outline: none;
+}
+
+p {
+    //font-style: normal;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    letter-spacing: 0.06rem;
+    color: $color-grey-dark;
+    padding-top: 1.7rem;
+}
+
+.date {
+    font-weight: normal;
+    font-size: 1.2rem;
+    padding-top: 1.5rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+//BUTTONS
+//=== Button styling
+.btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1.5;
+    font-family: $font-primary;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    &:focus { outline: none; }
+
+    &--big {
+        font-size: 2rem;
+        padding: 1.5rem 7rem;
+        letter-spacing: 0.06rem;
+    }
+
+    &--small {
+        font-size: .9rem;
+        padding: 1.2rem 2rem;
+        letter-spacing: 0.02rem;
+    }
+  }
+
+  //=== Drawing effect
+@mixin btn-border-drawing($color: #ccc, $hover: black, $width: 2px, $vertical: top, $horizontal: left, $duration: 0.25s) {
+    box-shadow: inset 0 0 0 $width $color;
+    color: $color;
+    transition: color $duration $duration/3;
+    position: relative;
+    
+    &::before,
+    &::after {
+      border: 0 solid transparent;
+      box-sizing: border-box;
+      content: '';
+      pointer-events: none;
+      position: absolute;
+      width: 0; height: 0;
+      
+      #{$vertical}: 0; 
+      #{$horizontal}: 0;
+    }
+  
+    &::before {
+      $h-side: if($horizontal == 'left', 'right', 'left');
+      
+      border-#{$vertical}-width: $width;
+      border-#{$h-side}-width: $width;
+    }
+    
+    &::after {
+      $v-side: if($vertical == 'top', 'bottom', 'top');
+      
+      border-#{$v-side}-width: $width;
+      border-#{$horizontal}-width: $width;
+    }
+    
+    &:hover {
+      color: $hover;
+      
+      &::before,
+      &::after {
+        border-color: $hover;
+        transition: border-color 0s, width $duration, height $duration;
+        width: 100%;
+        height: 100%;
+      }
+      
+      &::before { transition-delay: 0s, 0s, $duration; }
+      
+      &::after { transition-delay: 0s, $duration, 0s; }
+    }
+  }
+  
+  .draw-border {
+    @include btn-border-drawing($color-grey-dark, $color-primary, 2px, bottom, right);
+  }
+  .draw-border--small {
+    @include btn-border-drawing($color-grey-dark, $color-primary, 1px, bottom, right);
+  }

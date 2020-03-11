@@ -1,0 +1,74 @@
+.footer {
+    background-color: $color-grey-dark;
+
+    &__grid {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        justify-content: space-between;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        
+        h4 {
+            color: $color-white;
+            padding-bottom: 1rem;
+        }
+
+        p {
+            color: $color-white;
+            line-height: 1rem;
+            padding: .5rem;
+        }
+
+        .icon,
+        p {
+        vertical-align: middle;
+        display: inline-block;
+        }
+        
+        .icon {
+            fill: #fff;
+
+            &--big {
+                width: 3rem;
+                height: 3rem;
+                transition: all .2s;
+
+                &:hover,
+                &:active {
+                    fill: $color-primary;
+                    transform: translate(0, -2px);
+                }
+            }
+
+            &--small {
+                width: 2.5rem;
+                height: 2.5rem;
+                padding-right: .5rem;
+            }
+        }
+
+        &--2 {
+            align-items: center;
+        }
+
+        .social {
+            padding-top: 0.5rem;
+
+            :not(:last-child) {
+                padding-right: .5rem;
+            }
+        }
+
+        &--3 {
+            padding-top: 2rem;
+            text-align: right;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.about {
+    height: 50rem;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    &__text {
+        grid-column: 1 / 4;
+        margin-right: 5rem;
+    }
+
+    &__img {
+        width: 100%;
+        grid-column: 4 / 6;
+    }
+
+    &__button {
+        margin-top: 3rem;
+    }
+}

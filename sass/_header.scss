@@ -1,0 +1,55 @@
+.header {
+    height: 75vh;
+    width: 100%;
+    margin-top: 8rem;
+    overflow: hidden;
+    //position: relative;
+    background-image: url("/img/main.jpg");
+    background-size: cover;
+    background-position: center;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+    @media only screen and (max-device-width: 1366px) {
+        .header {
+        background-attachment: scroll;
+        }
+    }
+    
+    &__title {
+        max-width: 80rem;
+        height: 50rem;
+        margin: 0 auto;
+        position: relative;
+        padding: 0 25rem;
+    }
+    
+    &__h1 {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.8);
+        font-weight: 500;
+        font-size: 5.5rem;
+        letter-spacing: 0.06rem;
+        line-height: 1.2;
+        padding: 0 1rem;
+        position: absolute;
+        top: 25rem;
+        right: 0;
+    }
+
+    &__h2 {
+        color: black;
+        background-color: rgba(255, 255, 255, 0.8);
+        font-weight: 600;
+        font-size: 3rem;
+        letter-spacing: 0.04rem;
+        padding: 0 1rem;
+        position: absolute;
+        top: 20.9rem;
+        right: 7rem;
+        z-index: 100;
+    }
+}
