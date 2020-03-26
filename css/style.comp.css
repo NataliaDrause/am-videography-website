@@ -266,6 +266,7 @@ body {
     outline: none;
     display: inline;
     position: relative;
+    z-index: 2;
     overflow: hidden;
     transition: color .5s ease; }
   .navbar__nav-link:hover, .navbar__nav-link:focus {
