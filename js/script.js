@@ -9,16 +9,27 @@ $(window).scroll(function() {
   }
 });
 
+//PLAY VIDEO WHEN IN VIEWPORT
+$(window).scroll(function() {
+  $(".myvideos").each(function() {
+      if ($(this).visible()) {
+          $(this)[0].play();
+      } else {
+          $(this)[0].pause();
+      }
+  });
+});
+
 //PLAY VIDEO WHEN HOVER
-$(document).ready(function() {
-   $(".myvideos").on("mouseover", function(event) {
-     this.play();
+// $(document).ready(function() {
+//    $(".myvideos").on("mouseover", function(event) {
+//      this.play();
  
-   }).on('mouseout', function(event) {
-     this.pause();
+//    }).on('mouseout', function(event) {
+//      this.pause();
  
-   });
- });
+//    });
+//  });
 
  //REVEAL ON SCROLL
  // init controller

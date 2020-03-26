@@ -40,6 +40,7 @@
         justify-content: end;
         align-items: center;
         height: 5rem;
+        position: relative; ///////// this line is for DROPDOWN MENU
         //min-width: 40rem;
 
         // @media only screen and (max-width: $bp-large) {
@@ -49,6 +50,11 @@
     &__nav-item {
         list-style: none;
         padding: 0 1rem;
+        position: relative; ///////// this line is for DROPDOWN MENU
+
+        &:hover > .dropdown {
+            display: block;
+        }
     }
     &__nav-link:link,
     &__nav-link:visited {
@@ -60,7 +66,7 @@
         outline: none;
         display: inline;
         position: relative;
-        z-index: 2;
+        //z-index: 2;
         overflow: hidden;
 	    transition: color .5s ease;
     }
@@ -68,7 +74,7 @@
     &__nav-link:hover,
     &__nav-link:focus {
         outline: 0;
-        color: #E79902;
+        color: $color-primary;
         transition: color .5s ease;
     }
 
@@ -83,16 +89,20 @@
     &__nav-link:hover:after,
     &__nav-link:focus:after {
         outline: 0;
-        background-color:#E79902;
+        background-color: $color-primary;
                 transition:  all .5s ease;
     }
 
     &__nav-link:hover:before,
     &__nav-link:focus:before {
         outline: 0;
-        background-color: #E79902;
+        background-color: $color-primary;
                 transition:  all .5s ease;
     }
+}
+
+.drop-item span {
+    display: none;
 }
 
 /* UNDERLINES */
@@ -109,3 +119,206 @@
     left: 0%;
     bottom: -6px;
   }
+
+//////// DROPDOWN MENU ////////// 
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+
+    .navbar__nav-item {
+        padding: .75rem 2rem;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 1);
+        opacity: 0;
+        transform-origin: bottom;
+        animation: enter 0.2s ease forwards;
+
+        &:nth-child(1) {
+            padding-top: 1.5rem;
+        }
+
+        @for $n from 1 through 3 { //change this code if there are more items
+            &:nth-child(#{$n}) {
+                animation-duration: 0.2s + 0.1s * ($n - 1);
+                animation-delay: 0.1s * ($n - 1);
+            }
+        }
+    }
+}
+
+////mobile menu
+
+.navbar {
+    
+    &__checkbox {
+        display: none;
+    }
+    &__button {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .drop-item span {
+        display: inline-block;
+        position: relative;
+        transition: transform .2s;
+    }
+
+    .drop-item:hover span {
+        padding-left: 0;
+        transform: rotate(90deg);
+    }
+
+    .navbar {
+
+        &__content {
+            position: relative;
+            width: 100%;
+        }
+
+        &__nav-item {
+            padding: 1rem;
+        }
+
+        &__nav-link:link,
+        &__nav-link:visited {
+            font-size: 1.3rem;
+        }
+
+        &__nav {
+            display: none;
+            background-color: white;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            height: 80vh;
+            animation: fade 0.2s ease-out;
+    
+            & > .navbar__nav-item {
+                flex: 0;
+                opacity: 0;
+                animation: enter 0.3s ease-out forwards;
+    
+                & + .navbar__nav-item {
+                    margin-top: 0.75rem;
+                }
+    
+                &:after {
+                    left: auto;
+                    right: 1rem;
+                    bottom: calc(50% - 2px);
+                }
+            }
+        }
+
+        &__button {
+            display: block;
+            height: 7rem;
+            width: 7rem;
+            position: relative;
+            border-radius: 50%;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        //functionality
+        &__checkbox:checked ~ &__content &__nav {
+            display: flex;
+        }
+        //icon
+        &__icon {
+            position: relative;
+            margin-top: 3.5rem;
+    
+            &,
+            &::before,
+            &::after {
+                width: 3rem;
+                height: 2.5px;
+                background-color: black;
+                display: inline-block;
+            }
+    
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                transition: all .2s;
+            }
+    
+            &::before {
+                top: -1rem;
+            }
+            &::after {
+                top: 1rem;
+            }
+        }
+    
+        &__checkbox:checked + &__button &__icon {
+            background-color: transparent;
+        }
+    
+        &__checkbox:checked + &__button &__icon::before {
+            top: 0;
+            transform: rotate(135deg);
+        }
+        &__checkbox:checked + &__button &__icon::after {
+            top: 0;
+            transform: rotate(-135deg);
+        }
+    }
+
+    // !!!!!!!!!!!!!!!change the code below for more main menu items
+    @for $n from 1 through 5 { 
+        .navbar__nav > .navbar__nav-item:nth-child(#{$n}) {
+            animation-delay: 0.1s * ($n - 1);
+        }
+    }
+
+    //mobile submenu
+    .dropdown {
+        position: relative;
+        top: 0%;
+        margin-top: 2rem;
+        text-align: center;
+
+        .navbar__nav-item {
+            background-color: $color-grey-light;
+
+            &:nth-child(1) {
+                padding-top: .75rem;
+            }
+        }
+
+        .navbar__nav-link:link,
+        .navbar__nav-link:visited {
+            font-size: 1.2rem;
+        }
+    }
+
+}
+
+////menu animation
+@keyframes enter {
+    from {
+      opacity: 0;
+      transform: scaleY(0.98) translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
