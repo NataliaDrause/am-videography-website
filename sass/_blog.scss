@@ -6,8 +6,11 @@
         margin-top: 5rem;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        //grid-template-rows: 1fr;
         gap: 3rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__box {

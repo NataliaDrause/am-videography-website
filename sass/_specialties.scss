@@ -11,11 +11,21 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-        align-items: center;    
+        align-items: center;  
+
+        @media only screen and (max-width: $bp-small) {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 5rem;
+        }  
 
         // description
         .featured__desc {
             padding: 5rem 7rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                padding: 3rem;
+            }  
 
             hr {
                 border: 1px solid $color-primary;
@@ -79,18 +89,33 @@
             grid-column: 2 / 3;
             grid-row: 1 / 2;
             transform: translate(-10%, 10%);
+
+            @media only screen and (max-width: $bp-small) {
+                width: 100%;
+                transform: translate(0, 0);
+            } 
         }
         .myvideos--2 {
             width: 103%;
             grid-column: 1 / 2;
             grid-row: 2 / 3;
             transform: translate(3%, 0);
+
+            @media only screen and (max-width: $bp-small) {
+                width: 100%;
+                transform: translate(0, 0);
+            } 
         }
         .myvideos--3 {
             width: 108%;
             grid-column: 2 / 3;
             grid-row: 3 / 4;
             transform: translate(-5%, -12%);
+
+            @media only screen and (max-width: $bp-small) {
+                width: 100%;
+                transform: translate(0, 0);
+            } 
         }
     }
 
@@ -106,10 +131,16 @@
         grid-template-rows: 1fr 1fr;
         gap: 3rem;
 
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            gap: 3rem;
+        }  
+
         figure {
             position: relative;
             overflow: hidden;
-            height: 26rem;
+            max-height: 26rem;
             width: 100%;
             border: 5px solid #FFFFFF;
             box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);

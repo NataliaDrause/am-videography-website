@@ -9,11 +9,21 @@
         justify-content: space-between;
         padding-top: 3rem;
         padding-bottom: 3rem;
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            gap: 2rem;
+        }
     }
 
     &__column {
         display: flex;
         flex-direction: column;
+
+        @media only screen and (max-width: $bp-small) {
+            align-items: center;
+        }
         
         h4 {
             color: $color-white;
@@ -69,6 +79,7 @@
         &--3 {
             padding-top: 2rem;
             text-align: right;
+
         }
     }
 }

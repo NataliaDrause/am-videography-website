@@ -5,6 +5,13 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 
+    @media only screen and (max-width: $bp-medium) {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
     &__text {
         grid-column: 1 / 4;
         margin-right: 5rem;
@@ -13,6 +20,10 @@
     &__img {
         width: 100%;
         grid-column: 4 / 6;
+
+        @media only screen and (max-width: $bp-medium) {
+            display: none;
+        }
     }
 
     &__button {

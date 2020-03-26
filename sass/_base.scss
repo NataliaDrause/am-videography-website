@@ -8,11 +8,11 @@ $color-grey-light: #eeeeee;
 // FONT VARIABLES
 $font-primary: 'Montserrat', sans-serif;
 
-// //RESPONSIVE BREAKPOINT
+//RESPONSIVE BREAKPOINT
 // $bp-largest: 75em; // 1200px
-// $bp-large: 62.5em; // 1000px
-// $bp-medium: 50em; // 800px/16=50
-// $bp-small: 37.5em; // 600px/16=37.5
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px/16=50
+$bp-small: 37.5em; // 600px/16=37.5
 
 *,
 *::before,
@@ -27,9 +27,9 @@ html {
     font-size: 62.5%;
     scroll-behavior: smooth;
 
-    // @media only screen and (max-width: $bp-largest) {
-    //     font-size: 50%;
-    // }
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%;
+    }
 }
 
 body {
@@ -49,6 +49,10 @@ body {
 .container {
     max-width: 100rem;
     padding: 0 5rem;
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 0 3rem;
+    }
 }
 
 //REVEAL ON SCROLL

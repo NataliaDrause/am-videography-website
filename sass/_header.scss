@@ -8,12 +8,16 @@
     background-size: cover;
     background-position: center;
 
+    @media only screen and (max-width: $bp-medium) {
+        background-position: 20% 100%;
+    }
+
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-repeat: no-repeat;
 
     /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
-    @media only screen and (max-device-width: 1366px) {
+    @media only screen and (max-device-width: 1200px) {
         .header {
         background-attachment: scroll;
         }
@@ -21,10 +25,18 @@
     
     &__title {
         max-width: 80rem;
-        height: 50rem;
+        //height: 50rem;
         margin: 0 auto;
         position: relative;
-        padding: 0 25rem;
+        //padding: 0 15rem;
+        top: 45%;
+
+        @media only screen and (max-width: $bp-small) {
+            //margin-right: 3rem;
+            display: flex;
+            flex-direction: column;
+            top: 40%;
+        }
     }
     
     &__h1 {
@@ -36,8 +48,15 @@
         line-height: 1.2;
         padding: 0 1rem;
         position: absolute;
-        top: 25rem;
+        top: 4rem;
         right: 0;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 7vw;
+            position: relative;
+            margin: 0 auto;
+            display: inline-block;
+        }
     }
 
     &__h2 {
@@ -48,8 +67,16 @@
         letter-spacing: 0.04rem;
         padding: 0 1rem;
         position: absolute;
-        top: 20.9rem;
         right: 7rem;
         z-index: 100;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 4vw;
+            right: 0;
+            top: 4.3rem;
+            position: relative;
+            margin: 0 auto;
+            display: inline-block;
+        }
     }
 }
