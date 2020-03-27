@@ -408,14 +408,14 @@ body {
   .navbar__nav-item {
     padding: 1rem; }
   .navbar__nav-link:link, .navbar__nav-link:visited {
-    font-size: 1.3rem; }
+    font-size: 1.6rem; }
   .navbar__nav {
     display: none;
     background-color: white;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: 90vh;
+    height: calc(100vh - 72px);
     width: 100%;
     animation: fade 0.2s ease-out; }
     .navbar__nav > .navbar__nav-item {
@@ -484,7 +484,7 @@ body {
         padding-top: .75rem; }
     .dropdown .navbar__nav-link:link,
     .dropdown .navbar__nav-link:visited {
-      font-size: 1.2rem; } }
+      font-size: 1.4rem; } }
 
 @keyframes enter {
   from {

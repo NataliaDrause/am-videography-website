@@ -180,7 +180,6 @@
     .navbar {
 
         &__content {
-            //display: none;
             position: relative;
             width: 100%;
         }
@@ -191,7 +190,7 @@
 
         &__nav-link:link,
         &__nav-link:visited {
-            font-size: 1.3rem;
+            font-size: 1.6rem;
         }
 
         &__nav {
@@ -200,7 +199,7 @@
             flex-direction: column;
             justify-content: center;
             text-align: center;
-            height: 90vh;
+            height: calc(100vh - 72px);
             width: 100%;
             animation: fade 0.2s ease-out;
     
@@ -303,7 +302,7 @@
 
         .navbar__nav-link:link,
         .navbar__nav-link:visited {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
         }
     }
 
