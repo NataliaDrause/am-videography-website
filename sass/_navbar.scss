@@ -4,6 +4,7 @@
     top: 0;
     background-color: white;
     z-index: 1000;
+    border: 1px solid white;
 }
 
 .navbar-container-shadow {
@@ -199,7 +200,7 @@
             flex-direction: column;
             justify-content: center;
             text-align: center;
-            height: 95vh;
+            height: 90vh;
             width: 100%;
             animation: fade 0.2s ease-out;
     

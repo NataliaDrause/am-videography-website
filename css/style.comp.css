@@ -203,8 +203,7 @@ body {
   /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */ }
   @media only screen and (max-width: 50em) {
     .header {
-      background-position: 20% 100%;
-      height: 80vh; } }
+      background-position: 20% 100%; } }
   @media only screen and (max-device-width: 1200px) {
     .header .header {
       background-attachment: scroll; } }
@@ -274,7 +273,8 @@ body {
   position: fixed;
   top: 0;
   background-color: white;
-  z-index: 1000; }
+  z-index: 1000;
+  border: 1px solid white; }
 
 .navbar-container-shadow {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15); }
@@ -415,7 +415,7 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: 95vh;
+    height: 90vh;
     width: 100%;
     animation: fade 0.2s ease-out; }
     .navbar__nav > .navbar__nav-item {
@@ -682,7 +682,7 @@ figure.effect p {
   transform: scale(1.5); }
   @media only screen and (max-width: 37.5em) {
     figure.effect p {
-      font-size: 2.5vw; } }
+      font-size: 1.2rem; } }
 
 figure.effect:hover figcaption::before,
 figure.effect:hover p {
