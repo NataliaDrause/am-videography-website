@@ -7,14 +7,16 @@
 
     @media only screen and (max-width: $bp-medium) {
         height: auto;
-        display: flex;
-        flex-direction: column;
-        margin-top: 0;
+        grid-template-columns: 1fr;
     }
 
     &__text {
         grid-column: 1 / 4;
         margin-right: 5rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin-right: 0;
+        }
     }
 
     &__img {

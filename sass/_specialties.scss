@@ -188,7 +188,13 @@ figure.effect img {
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
 	-webkit-transform: scale(1.12);
-	transform: scale(1.12);
+    transform: scale(1.12);
+    
+    @media only screen and (max-width: $bp-small) {
+        opacity: 0.9;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    } 
 }
 
 figure.effect:hover img {
@@ -217,7 +223,13 @@ figure.effect figcaption::before,
 figure.effect p {
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    
+    @media only screen and (max-width: $bp-small) {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    } 
 }
 
 figure.effect h3 {
@@ -228,7 +240,11 @@ figure.effect p {
 	margin: 0 auto;
 	max-width: 25rem;
 	-webkit-transform: scale(1.5);
-	transform: scale(1.5);
+    transform: scale(1.5);
+    
+    @media only screen and (max-width: $bp-small) {
+        font-size: 2.5vw;
+    } 
 }
 
 figure.effect:hover figcaption::before,

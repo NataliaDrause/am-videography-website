@@ -54,7 +54,8 @@
         padding: 0 1rem;
         position: relative; ///////// this line is for DROPDOWN MENU
 
-        &:hover > .dropdown {
+        &:hover > .dropdown,
+        &:active > .dropdown {
             display: block;
         }
     }
@@ -198,7 +199,7 @@
             flex-direction: column;
             justify-content: center;
             text-align: center;
-            height: 80vh;
+            height: 95vh;
             width: 100%;
             animation: fade 0.2s ease-out;
     

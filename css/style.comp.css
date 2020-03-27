@@ -24,6 +24,9 @@ body {
 
 .full-screen {
   height: 100vh; }
+  @media only screen and (max-width: 37.5em) {
+    .full-screen {
+      height: 90vh; } }
 
 .container {
   max-width: 100rem;
@@ -68,12 +71,13 @@ body {
   @media only screen and (max-width: 50em) {
     .about {
       height: auto;
-      display: flex;
-      flex-direction: column;
-      margin-top: 0; } }
+      grid-template-columns: 1fr; } }
   .about__text {
     grid-column: 1 / 4;
     margin-right: 5rem; }
+    @media only screen and (max-width: 50em) {
+      .about__text {
+        margin-right: 0; } }
   .about__img {
     width: 100%;
     grid-column: 4 / 6; }
@@ -199,7 +203,8 @@ body {
   /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */ }
   @media only screen and (max-width: 50em) {
     .header {
-      background-position: 20% 100%; } }
+      background-position: 20% 100%;
+      height: 80vh; } }
   @media only screen and (max-device-width: 1200px) {
     .header .header {
       background-attachment: scroll; } }
@@ -308,7 +313,8 @@ body {
     list-style: none;
     padding: 0 1rem;
     position: relative; }
-    .navbar__nav-item:hover > .dropdown {
+    .navbar__nav-item:hover > .dropdown,
+    .navbar__nav-item:active > .dropdown {
       display: block; }
   .navbar__nav-link:link, .navbar__nav-link:visited {
     font-size: 1.2rem;
@@ -409,7 +415,7 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: 80vh;
+    height: 95vh;
     width: 100%;
     animation: fade 0.2s ease-out; }
     .navbar__nav > .navbar__nav-item {
@@ -629,6 +635,11 @@ figure.effect img {
   transition: opacity 0.35s, transform 0.35s;
   -webkit-transform: scale(1.12);
   transform: scale(1.12); }
+  @media only screen and (max-width: 37.5em) {
+    figure.effect img {
+      opacity: 0.9;
+      -webkit-transform: scale(1);
+      transform: scale(1); } }
 
 figure.effect:hover img {
   opacity: 0.9;
@@ -654,6 +665,12 @@ figure.effect p {
   opacity: 0;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s; }
+  @media only screen and (max-width: 37.5em) {
+    figure.effect figcaption::before,
+    figure.effect p {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1); } }
 
 figure.effect h3 {
   padding-top: 5rem; }
@@ -663,6 +680,9 @@ figure.effect p {
   max-width: 25rem;
   -webkit-transform: scale(1.5);
   transform: scale(1.5); }
+  @media only screen and (max-width: 37.5em) {
+    figure.effect p {
+      font-size: 2.5vw; } }
 
 figure.effect:hover figcaption::before,
 figure.effect:hover p {
@@ -727,7 +747,7 @@ p {
     letter-spacing: 0.06rem; }
     @media only screen and (max-width: 37.5em) {
       .btn--big {
-        padding: 1.5rem 3rem; } }
+        padding: 1.5rem 5rem; } }
   .btn--small {
     font-size: .9rem;
     padding: 1.2rem 2rem;
