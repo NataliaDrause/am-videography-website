@@ -23,7 +23,7 @@ body {
   overflow-x: hidden; }
 
 .full-screen {
-  height: 100vh; }
+  height: 95vh; }
   @media only screen and (max-width: 37.5em) {
     .full-screen {
       height: 90vh; } }
@@ -73,11 +73,7 @@ body {
       height: auto;
       grid-template-columns: 1fr; } }
   .about__text {
-    grid-column: 1 / 4;
-    margin-right: 5rem; }
-    @media only screen and (max-width: 50em) {
-      .about__text {
-        margin-right: 0; } }
+    grid-column: 1 / 4; }
   .about__img {
     width: 100%;
     grid-column: 4 / 6; }
@@ -129,7 +125,7 @@ body {
           color: #E79902; }
 
 .cta {
-  margin: 1rem auto 5rem auto;
+  margin: 1rem auto 10rem auto;
   text-align: center; }
   .cta__button {
     margin-top: 5rem; }
@@ -500,6 +496,60 @@ body {
   to {
     opacity: 1; } }
 
+.portfolio {
+  margin: 14rem auto;
+  text-align: center; }
+  .portfolio__hero {
+    margin: 5rem auto;
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; }
+    .portfolio__hero iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0; }
+  .portfolio__other {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .portfolio__other {
+        grid-template-columns: 1fr; } }
+    .portfolio__other figure {
+      width: 100%;
+      position: relative;
+      margin: 0 auto; }
+      @media only screen and (max-width: 37.5em) {
+        .portfolio__other figure {
+          width: 60%; } }
+      .portfolio__other figure .play {
+        position: relative; }
+        .portfolio__other figure .play__img {
+          width: 100%;
+          max-height: 20rem;
+          overflow: hidden; }
+          .portfolio__other figure .play__img img {
+            width: 100%;
+            height: 100%; }
+        .portfolio__other figure .play__button {
+          opacity: 0;
+          width: 5rem;
+          position: absolute;
+          top: calc(50% - 2.5rem);
+          left: calc(50% - 2.5rem);
+          transform: translateY(1.5rem);
+          transition: all .3s; }
+      .portfolio__other figure figcaption p {
+        padding: 0 .3rem; }
+      .portfolio__other figure:hover .play__button,
+      .portfolio__other figure:active .play__button {
+        opacity: 1;
+        transform: translateY(0); }
+
 .specialties {
   margin: 7rem auto 0 auto; }
   .specialties h2 {
@@ -729,6 +779,13 @@ p {
   padding-top: 1.5rem;
   font-weight: 300;
   font-style: italic; }
+
+*::-moz-selection {
+  /* Code for Firefox */
+  background: rgba(231, 153, 2, 0.8); }
+
+*::selection {
+  background: rgba(231, 153, 2, 0.8); }
 
 .btn {
   background: none;

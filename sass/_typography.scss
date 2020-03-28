@@ -48,6 +48,16 @@ p {
     font-style: italic;
 }
 
+// TEXT SELECTION
+
+*::-moz-selection { /* Code for Firefox */
+  background: rgba($color-primary, .8);
+}
+
+*::selection {
+  background: rgba($color-primary, .8);
+}
+
 //BUTTONS
 //=== Button styling
 .btn {

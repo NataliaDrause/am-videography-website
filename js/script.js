@@ -72,3 +72,12 @@ $(window).scroll(function() {
            .addTo(controller);
  }
 
+ //portfolio target
+ $(document).ready(function() {
+  $('.target').click(function(event) {
+    $('body, html').animate({
+      scrollTop: $("#target-iframe").offset().top -150}, 60);
+
+  });
+});
+

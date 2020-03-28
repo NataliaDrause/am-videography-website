@@ -1,0 +1,83 @@
+.portfolio {
+    margin: 14rem auto;
+    text-align: center;
+
+    &__hero {
+        margin: 5rem auto;
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%;
+
+        & iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    }
+
+    &__other {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 2rem;
+
+        // @media only screen and (max-width: $bp-medium) {
+        //     grid-template-columns: 1fr 1fr;
+        // }
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: 1fr;
+        }
+
+        figure {
+            width: 100%;
+            position: relative;
+            margin: 0 auto;
+
+            @media only screen and (max-width: $bp-small) {
+                width: 60%;
+            }
+            
+            .play {
+                position: relative;
+        
+                &__img {
+                    width: 100%;
+                    max-height: 20rem;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                &__button {
+                    opacity: 0;
+                    width: 5rem;
+                    position: absolute;
+                    top: calc(50% - 2.5rem);
+                    left: calc(50% - 2.5rem);
+                    transform: translateY(1.5rem);
+                    transition: all .3s;
+                }
+
+            }
+
+            figcaption p {
+                padding: 0 .3rem;
+            }
+
+            &:hover .play__button,
+            &:active .play__button {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        
+    }
+}
