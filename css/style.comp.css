@@ -286,7 +286,7 @@ body {
   flex-wrap: wrap; }
   @media only screen and (max-width: 62.5em) {
     .navbar {
-      padding: 2rem 3rem; } }
+      padding: 3rem 3rem; } }
   @media only screen and (max-width: 50em) {
     .navbar {
       padding: 1rem 2rem; } }
@@ -549,6 +549,52 @@ body {
       .portfolio__other figure:active .play__button {
         opacity: 1;
         transform: translateY(0); }
+
+.rates {
+  margin: 14rem auto;
+  text-align: center; }
+  .rates h2 {
+    margin-bottom: 5rem; }
+  .rates__box {
+    margin: 3rem auto;
+    padding: 3rem;
+    background-color: #eeeeee;
+    text-align: start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 2rem; }
+    @media only screen and (max-width: 50em) {
+      .rates__box {
+        grid-template-columns: 1fr; } }
+  .rates__desc p {
+    font-size: 1.6rem;
+    font-weight: 600; }
+  .rates__desc ul {
+    margin: 0;
+    padding: 1.5rem 1rem; }
+  .rates__desc li {
+    list-style-type: square;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    letter-spacing: 0.06rem; }
+  .rates__desc .rates__button {
+    margin: 1rem 0; }
+  .rates__video {
+    position: relative; }
+    .rates__video iframe {
+      width: 100%;
+      max-height: 25rem; }
+      @media only screen and (max-width: 50em) {
+        .rates__video iframe {
+          max-height: 40rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .rates__video iframe {
+          max-height: 30rem; } }
+      @media only screen and (max-width: 28.1em) {
+        .rates__video iframe {
+          max-height: 22rem; } }
 
 .specialties {
   margin: 7rem auto 0 auto; }

@@ -1,0 +1,80 @@
+.rates {
+    margin: 14rem auto;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 5rem;
+    }
+
+    &__box {
+        margin: 3rem auto;
+        padding: 3rem;
+        background-color: $color-grey-light;
+        text-align: start;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 2rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__desc {
+
+        p {
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        ul {
+            margin: 0;
+            padding: 1.5rem 1rem;
+        }
+
+        li {
+            list-style-type: square;
+            font-weight: normal;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            letter-spacing: 0.06rem;
+        }
+
+        .rates__button {
+            margin: 1rem 0;
+        }
+    }
+
+    &__video {
+        position: relative;
+        //margin: 0 auto;
+        // overflow: hidden;
+        // padding-top: 56.25%;
+
+        & iframe {
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            // width: 100%;
+            // height: 100%;
+            // border: 0;
+            width: 100%;
+            max-height: 25rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                max-height: 40rem;
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                max-height: 30rem;
+            }
+
+            @media only screen and (max-width: $bp-xsmall) {
+                max-height: 22rem;
+            }
+
+        }
+    }
+
+}
