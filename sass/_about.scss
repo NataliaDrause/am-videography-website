@@ -4,6 +4,7 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    gap: 5rem;
 
     @media only screen and (max-width: $bp-medium) {
         height: auto;
@@ -25,5 +26,6 @@
 
     &__button {
         margin-top: 3rem;
+
     }
 }

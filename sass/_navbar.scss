@@ -143,12 +143,17 @@
             padding-top: 1.5rem;
         }
 
-        @for $n from 1 through 3 { //change this code if there are more items
+        @for $n from 1 through 7 { //change this code if there are more items
             &:nth-child(#{$n}) {
                 animation-duration: 0.2s + 0.1s * ($n - 1);
                 animation-delay: 0.1s * ($n - 1);
             }
         }
+    }
+
+    .navbar__nav-link:link,
+    .navbar__nav-link:visited {
+        font-size: 1.1rem;
     }
 }
 
