@@ -17,7 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: $color-white;
+    //background-color: $color-white;
     padding: 3rem 5rem;
     flex-wrap: wrap;
 
@@ -285,7 +285,7 @@
     }
 
     // !!!!!!!!!!!!!!!change the code below for more main menu items
-    @for $n from 1 through 5 { 
+    @for $n from 1 through 6 { 
         .navbar__nav > .navbar__nav-item:nth-child(#{$n}) {
             animation-delay: 0.1s * ($n - 1);
         }
