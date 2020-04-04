@@ -154,12 +154,13 @@
             }
 
             figcaption {
-                padding: 2rem;
+                padding: 1rem;
                 -webkit-backface-visibility: hidden;
                 backface-visibility: hidden;
 
                 p {
                     color: $color-white;
+                    font-size: 1.3rem;
                 }
             }
 

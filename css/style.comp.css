@@ -757,11 +757,12 @@ body {
         min-height: 100%;
         max-width: 100%; }
       .specialties__other figure figcaption {
-        padding: 2rem;
+        padding: 1rem;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden; }
         .specialties__other figure figcaption p {
-          color: #fff; }
+          color: #fff;
+          font-size: 1.3rem; }
       .specialties__other figure figcaption,
       .specialties__other figure figcaption > a {
         position: absolute;
