@@ -6,48 +6,50 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300i,400,500,600&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+    <script src="js\jquery.js"></script>
     <script src="js\ScrollMagic.js"></script>
-    <script src="js\jquery.visible.min.js"></script>
+    <!-- <script src="js\jquery.visible.min.js"></script> -->
 
     <title>AM Videography</title>
 </head>
 <body>
-    <!-- FIRST VIEW FULL SCREEN -->
-    <div class="full-screen">
-        <nav class="navbar-container">
-            <div class="navbar">
-                <div class="navbar__logo">
-                    <a href="index.html"><img src="img/logo.png" alt="logo"></a>
-                </div>
-                <!-- checkbox -->
-                <input type="checkbox" class="navbar__checkbox" id="navi-toggle">
-                <label for="navi-toggle" class="navbar__button">
-                    <span class="navbar__icon">&nbsp;</span>
-                </label>
-                <!-- checkbox end  -->
-                <div class="navbar__content">
-                    <ul class="navbar__nav">
-                        <li class="navbar__nav-item"><a href="index.html"class="navbar__nav-link underline-left">Главная</a></li>
-                        <li class="navbar__nav-item"><a href="#"class="navbar__nav-link underline-left">Обо мне</a></li>
-                        <li class="navbar__nav-item drop-item"><a href="#"class="navbar__nav-link underline-left">Портфолио<span>&nbsp; &nbsp;</span><span>&#10095;</span></a>
-                            <ul class="dropdown">
-                                <li class="navbar__nav-item"><a href="portfolio.html"class="navbar__nav-link">Свадьбы</a></li>
-                                <li class="navbar__nav-item"><a href="portfolio.html"class="navbar__nav-link">Fashion видео</a></li>
-                                <li class="navbar__nav-item"><a href="portfolio.html"class="navbar__nav-link">Видеопортрет</a></li>
-                                <li class="navbar__nav-item"><a href="portfolio.html"class="navbar__nav-link">Рекламные&nbsp;ролики</a></li>
-                                <li class="navbar__nav-item"><a href="portfolio.html"class="navbar__nav-link">Музыкальные&nbsp;клипы</a></li>
-                                <li class="navbar__nav-item"><a href="portfolio.html"class="navbar__nav-link">Корпоративные&nbsp;видео</a></li>
-                                <li class="navbar__nav-item"><a href="portfolio.html"class="navbar__nav-link">Путешествия</a></li>
-                            </ul>
-                        </li>
-                        <li class="navbar__nav-item"><a href="rates.html"class="navbar__nav-link underline-left">Цены</a></li>
-                        <li class="navbar__nav-item"><a href="blog-page.html"class="navbar__nav-link underline-left">Блог</a></li>
-                        <li class="navbar__nav-item"><a href="#"class="navbar__nav-link underline-left">Контакты</a></li>
-                    </ul>
-                </div>
+    <!-- NAVIGATION MENU -->
+    <nav class="navbar-container">
+        <div class="navbar">
+            <div class="navbar__logo">
+                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
             </div>
-        </nav>
+            <!-- checkbox -->
+            <input type="checkbox" class="navbar__checkbox" id="navi-toggle">
+            <label for="navi-toggle" class="navbar__button">
+                <span class="navbar__icon">&nbsp;</span>
+            </label>
+            <!-- checkbox end  -->
+            <div class="navbar__content">
+                <ul class="navbar__nav">
+                    <li class="navbar__nav-item"><a href="index.html"class="navbar__nav-link underline-left">Главная</a></li>
+                    <li class="navbar__nav-item"><a href="#"class="navbar__nav-link underline-left">Обо мне</a></li>
+                    <li class="navbar__nav-item drop-item"><a href="#"class="navbar__nav-link underline-left">Портфолио<span>&nbsp; &nbsp;</span><span>&#10095;</span></a>
+                        <ul class="dropdown">
+                            <li class="navbar__nav-item"><a href="portfolio.html"class="navbar__nav-link">Свадьбы</a></li>
+                            <li class="navbar__nav-item"><a href="portfolio.html"class="navbar__nav-link">Fashion видео</a></li>
+                            <li class="navbar__nav-item"><a href="portfolio.html"class="navbar__nav-link">Видеопортрет</a></li>
+                            <li class="navbar__nav-item"><a href="portfolio.html"class="navbar__nav-link">Рекламные&nbsp;ролики</a></li>
+                            <li class="navbar__nav-item"><a href="portfolio.html"class="navbar__nav-link">Музыкальные&nbsp;клипы</a></li>
+                            <li class="navbar__nav-item"><a href="portfolio.html"class="navbar__nav-link">Корпоративные&nbsp;видео</a></li>
+                            <li class="navbar__nav-item"><a href="portfolio.html"class="navbar__nav-link">Путешествия</a></li>
+                        </ul>
+                    </li>
+                    <li class="navbar__nav-item"><a href="rates.html"class="navbar__nav-link underline-left">Цены</a></li>
+                    <li class="navbar__nav-item"><a href="blog-page.html"class="navbar__nav-link underline-left">Блог</a></li>
+                    <li class="navbar__nav-item"><a href="#"class="navbar__nav-link underline-left">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- HEADER -->
+    <div class="full-screen">
         <header class="header">
             <div class="header__title">
                 <h2 class="header__h2 digit--re">Anton Medvedev</h3>
@@ -84,7 +86,7 @@
             </div>
             <a class="featured__video__link digit--re" href="#">
                 <video class="myvideos myvideos--1" width="auto" height="auto">
-                    <source src="img/wedding-showreel-480.mp4" type="video/mp4">
+                    <source src="img/wedding-showreel-480.mp4" type="video/mp4" autoplay="true" muted="muted">
                     Your browser does not support the video.
                 </video>
             </a>
@@ -128,7 +130,7 @@
                 <img src="img/music-video-2-3.jpg" alt="music videos"/>
                 <figcaption>
                     <h3 class="h3--light">Музыкальные клипы</h3>
-                    <p>Съемки клипа любой сложности: от небольших музыкальных промо роликов и до полнометражных музыкальных фильмов.</p>
+                    <p>Стильные и динамичные музыкальные промо ролики и клипы.</p>
                     <a href="#">Подробнее</a>
                 </figcaption>			
             </figure>
@@ -136,7 +138,7 @@
                 <img src="img/corporate-video-2-2.jpg" alt="aero videography"/>
                 <figcaption>
                     <h3 class="h3--light">Корпоративные видео</h3>
-                    <p>Репортажная съемка мероприятий, информационные и презентационные видео о компании или продукта.</p>
+                    <p>Репортажная съемка мероприятий, информационные и презентационные видео.</p>
                     <a href="#">Подробнее</a>
                 </figcaption>			
             </figure>
