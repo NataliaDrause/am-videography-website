@@ -9,7 +9,6 @@ $color-grey-light: #eeeeee;
 $font-primary: 'Montserrat', sans-serif;
 
 //RESPONSIVE BREAKPOINT
-// $bp-largest: 75em; // 1200px
 $bp-large: 62.5em; // 1000px
 $bp-medium: 50em; // 800px/16=50
 $bp-small: 37.5em; // 600px/16=37.5
@@ -58,6 +57,30 @@ body {
     @media only screen and (max-width: $bp-small) {
         padding: 0 3rem;
     }
+}
+
+.page {
+    margin: 10rem auto;
+    min-height: calc(100vh - 165.6px - 28rem);
+}
+
+.pagination {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+.hr-pretty {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(231, 153, 2, 0), rgba(231, 153, 2, 0.75), rgba(231, 153, 2, 0));
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+.space-5 {
+    height: 5rem;
+}
+.space-3 {
+    height: 3rem;
 }
 
 //REVEAL ON SCROLL

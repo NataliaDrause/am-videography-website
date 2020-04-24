@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300i,400,500,600&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+    <script src="js\jquery.js"></script>
+    <script src="js\ScrollMagic.js"></script>
+    <!-- <script src="js\jquery.visible.min.js"></script> -->
+
+    <title>AM Videography</title>
+</head>
+<body>
+    <!-- NAVIGATION MENU -->
+    <nav class="navbar-container">
+        <div class="navbar">
+            <div class="navbar__logo">
+                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+            </div>
+            <!-- checkbox -->
+            <input type="checkbox" class="navbar__checkbox" id="navi-toggle">
+            <label for="navi-toggle" class="navbar__button">
+                <span class="navbar__icon">&nbsp;</span>
+            </label>
+            <!-- checkbox end  -->
+            <div class="navbar__content">
+                <ul class="navbar__nav">
+                    <li class="navbar__nav-item"><a href="index.html"class="navbar__nav-link underline-left">Главная</a></li>
+                    <li class="navbar__nav-item"><a href="#"class="navbar__nav-link underline-left">Обо мне</a></li>
+                    <li class="navbar__nav-item drop-item">
+                        <a href="javascript:void(0)"class="navbar__nav-link drop-item-link underline-left">Портфолио<span>&nbsp; &nbsp;</span>
+                        </a>
+                        <input type="checkbox" class="sub-navbar__checkbox" id="sub-navi-toggle">
+                        <label for="sub-navi-toggle" class="sub-navbar__button">
+                            Портфолио<span>&nbsp; &nbsp;</span><span class="sub-navbar__icon">&#10095;</span>
+                        </label>
+                        <ul class="dropdown">
+                            <li class="navbar__nav-item"><a href="portfolio.html"class="navbar__nav-link">Свадьбы</a></li>
+                            <li class="navbar__nav-item"><a href="portfolio.html"class="navbar__nav-link">Fashion видео</a></li>
+                            <li class="navbar__nav-item"><a href="portfolio.html"class="navbar__nav-link">Видеопортрет</a></li>
+                            <li class="navbar__nav-item"><a href="portfolio.html"class="navbar__nav-link">Рекламные&nbsp;ролики</a></li>
+                            <li class="navbar__nav-item"><a href="portfolio.html"class="navbar__nav-link">Музыкальные&nbsp;клипы</a></li>
+                            <li class="navbar__nav-item"><a href="portfolio.html"class="navbar__nav-link">Корпоративные&nbsp;видео</a></li>
+                            <li class="navbar__nav-item"><a href="portfolio.html"class="navbar__nav-link">Путешествия</a></li>
+                        </ul>
+                    </li>
+                    <li class="navbar__nav-item"><a href="rates.html"class="navbar__nav-link underline-left">Цены</a></li>
+                    <li class="navbar__nav-item"><a href="blog-page.html"class="navbar__nav-link underline-left">Блог</a></li>
+                    <li class="navbar__nav-item"><a href="#"class="navbar__nav-link underline-left">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- HEADER -->
+    <div class="full-screen">
+        <header class="header">
+            <div class="header__title">
+                <h2 class="header__h2 digit--re">Anton Medvedev</h2>
+                <h1 class="header__h1 digit">Video Production</h1>
+            </div>
+        </header>
+    </div>
+
+    <!-- ABOUT ME SECTION -->
+    <div class="about container">
+        <div class="about__text digit">
+            <h2>Добро пожаловать!</h2>
+            <p>Спасибо, что зашли на мою страницу! Меня зовут Антон. Я профессиональный видеограф из Санкт-Петербурга. Опыт в съемке видео и монтажа я получил во время обучения в США. Благодаря полученным знаниям, в своей работе я сочетаю современный стиль и новейшие технологии.</p>
+            <p>Я принимаю заказы на съемку видео роликов в Санкт-Петербурге и Сочи, а также рад проектам в других городах  России и заграницей.</p>
+            <p>Работаю над такими видео проектами как реклама, съемка мероприятий, музыкальные клипы, бэкстейджи, свадьбы, видеопортреты, корпоративные видео, fashion видео. Мои работы можно посмотреть в разделе Портфолио.</p>
+            <p>Буду рад сотрудничать с Вами и работать в совместных проектах!</p>
+            <div class="about__button"> 
+                <a href="#" class="btn btn--small draw-border draw-border--small">Читать далее</a>
+            </div>
+        </div>
+        <img src="img/about2.jpg" alt="portrait of the author" class="about__img digit--re">
+    </div>
+
+    <!-- SPECIALTIES SECTION -->
+    <div class="specialties container">
+        <h2 class="digit">Профессиональная съёмка и монтаж видео</h2>
+        <!-- FEATURED SPECIALTIES -->
+        <div class="specialties__featured">
+            <div class="featured__desc featured__desc--1 digit">
+                <h3 class="h3--dark">Свадьба</h3>
+                <hr>
+                <p>Съемка свадебного фильма в течении целого дня: утро невесты, регистрация, прогулка, банкет.</p>
+                <a class="featured__desc__link" href="#">Подробнее <span class="arr">&rarr;</span></a>
+            </div>
+            <div class="digit--re">
+                <a class="featured__video__link" href="#">
+                    <video class="myvideos myvideos--1" width="auto" height="auto">
+                        <source src="img/wedding-showreel-480.mp4" type="video/mp4" autoplay="true" muted="muted">
+                        Your browser does not support the video.
+                    </video>
+                </a>
+            </div>
+            <div class="featured__desc featured__desc--2 digit--re">
+                <h3 class="h3--dark">Fashion видео</h3>
+                <hr>
+                <p>Производство стильных и высококачественных видео клипов в стиле fashion.</p>
+                <a class="featured__desc__link" href="#">Подробнее <span class="arr">&rarr;</span></a>
+            </div>
+            <div class="digit">
+                <a class="featured__video__link" href="#">
+                    <video class="myvideos myvideos--2" width="auto" height="auto">
+                        <source src="img/fashion-showreel-480.mp4" type="video/mp4">
+                        Your browser does not support the video.
+                    </video>
+                </a>
+            </div>
+            <div class="featured__desc featured__desc--3 digit">
+                <h3 class="h3--dark">Видеопортрет</h3>
+                <hr>
+                <p>Видео прогулки, лав стори, индивидуальные портретные видео ролики для ваших социальных сетей.</p>
+                <a class="featured__desc__link" href="#">Подробнее <span class="arr">&rarr;</span></a>
+            </div>
+            <div class="digit--re">
+                <a class="featured__video__link" href="#">
+                    <video class="myvideos myvideos--3" width="auto" height="auto">
+                        <source src="img/portrait-showreel-480.mp4" type="video/mp4">
+                        Your browser does not support the video.
+                    </video>
+                </a> 
+            </div>  
+        </div>
+        <!-- OTHER SPECIALTIES -->
+        <h2 class="digit--re">А также...</h2>
+        <div class="specialties__other">
+            <figure class="effect digit">
+                <img src="img/advert-2.jpg" alt="advertisement videos"/>
+                <figcaption>
+                    <h3 class="h3--light">Рекламные ролики</h3>
+                    <p>Профессиональная видеосъемка услуги, продукта или товара для вашего бизнеса.</p>
+                    <a href="#">Подробнее</a>
+                </figcaption>			
+            </figure>
+            <figure class="effect digit--re">
+                <img src="img/music-video-2-3.jpg" alt="music videos"/>
+                <figcaption>
+                    <h3 class="h3--light">Музыкальные клипы</h3>
+                    <p>Стильные и динамичные музыкальные промо ролики и клипы.</p>
+                    <a href="#">Подробнее</a>
+                </figcaption>			
+            </figure>
+            <figure class="effect digit">
+                <img src="img/corporate-video-2-2.jpg" alt="aero videography"/>
+                <figcaption>
+                    <h3 class="h3--light">Корпоративные видео</h3>
+                    <p>Репортажная съемка мероприятий, информационные и презентационные видео.</p>
+                    <a href="#">Подробнее</a>
+                </figcaption>			
+            </figure>
+            <figure class="effect digit--re">
+                <img src="img/travel-video.jpg" alt="travel videos"/>
+                <figcaption>
+                    <h3 class="h3--light">Путешествия</h3>
+                    <p>Съемки и монтаж видеоблогов в любой точке мира.</p>
+                    <a href="#">Подробнее</a>
+                </figcaption>			
+            </figure>
+        </div>
+    </div>
+
+    <!-- CALL TO ACTION -->
+    <div class="container cta">
+        <h2 class="digit">Давайте работать вместе!</h2>
+        <p class="digit--re">Обращайтесь ко мне с любыми вопросами! Я буду рад помочь!</p>
+        <div class="cta__button digit"> 
+            <a href="#" class="btn btn--big draw-border draw-border--big">Написать</a>
+        </div>
+    </div>
+
+    <!-- BLOG -->
+    <div class="container blog">
+        <h2 class="digit">Недавние видеопроекты</h2>
+        <div class="blog__grid">
+            <div class="blog__box digit">
+                <img src="img/musicvideo.jpg" alt="music video">
+                <a href="#">
+                    <div class="blog__box__info">
+                        <h4>Съемка музыкального клипа в Санкт-Петербурге</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                        <hr>
+                        <p class="date">15 марта 2020</p>
+                        <a class="blog__link" href="#">Читать</a>
+                    </div>
+                </a>
+            </div>
+            <div class="blog__box digit--up">
+                <img src="img/busines.jpg" alt="business video">
+                <a href="#">
+                    <div class="blog__box__info">
+                        <h4>Видео-интервью для малого бизнеса в Москве</h4>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip...</p>
+                        <hr>
+                        <p class="date">20 февраля 2020</p>
+                        <a class="blog__link" href="#">Читать</a>
+                    </div>
+                </a>
+            </div>
+            <div class="blog__box digit--re">
+                <img src="img/castle.jpg" alt="travel video">
+                <a href="#">
+                    <div class="blog__box__info">
+                        <h4>Поездка в Германию. Travel video</h4>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse...</p>
+                        <hr>
+                        <p class="date">18 января 2020</p>
+                        <a class="blog__link" href="#">Читать</a>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- INSTAGRAM -->
+    <div class="instagram">
+        <h2>Подписывайтесь на мой Instagram</h2>
+        <div class="instagram__grid">
+            <div class="instagram__grid__pic">
+                <img src="img/about2.jpg" alt="">
+            </div>
+            <div class="instagram__grid__pic">
+                <img src="img/castle.jpg" alt="">
+            </div>
+            <div class="instagram__grid__pic">
+                <img src="img/corporate.jpg" alt="">
+            </div>
+            <div class="instagram__grid__pic">
+                <img src="img/main.jpg" alt="">
+            </div>
+            <div class="instagram__grid__pic">
+                <img src="img/travel.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER  -->
+    <footer class="footer">
+        <div class="footer__grid container">
+            <div class="footer__column footer__column--1">
+                <h4>Контакты</h4>
+                <p class="footer__p">
+                    <span><svg class="icon icon--small" version="1.1" viewBox="0 0 16 16">
+                        <path d="M11 10c-1 1-1 2-2 2s-2-1-3-2-2-2-2-3 1-1 2-2-2-4-3-4-3 3-3 3c0 2 2.055 6.055 4 8s6 4 8 4c0 0 3-2 3-3s-3-4-4-3z"></path>
+                        </svg></span>  +7 (000) 1234567</p>
+                <p class="footer__p">
+                    <span><svg class="icon icon--small" version="1.1"  viewBox="0 0 16 16">
+                        <path d="M13.333 0h-10.666c-1.467 0-2.667 1.2-2.667 2.667v10.666c0 1.467 1.2 2.667 2.667 2.667h10.666c1.468 0 2.667-1.2 2.667-2.667v-10.666c0-1.467-1.199-2.667-2.667-2.667zM4 4h8c0.143 0 0.281 0.031 0.409 0.088l-4.409 5.143-4.409-5.143c0.127-0.058 0.266-0.088 0.409-0.088zM3 11v-6c0-0.021 0.001-0.042 0.002-0.063l2.932 3.421-2.9 2.9c-0.023-0.083-0.034-0.17-0.034-0.258zM12 12h-8c-0.088 0-0.175-0.012-0.258-0.034l2.846-2.846 1.413 1.648 1.413-1.648 2.846 2.846c-0.083 0.023-0.17 0.034-0.258 0.034zM13 11c0 0.088-0.012 0.175-0.034 0.258l-2.9-2.9 2.932-3.421c0.001 0.021 0.002 0.042 0.002 0.063v6z"></path>
+                        </svg></span>  email@email.com</p>
+            </div>
+            <div class="footer__column footer__column--2">
+                <h4>Мы в соцсетях</h4>
+                <p class="social">
+                    <span><a href="#"><svg class="icon icon--big" version="1.1" viewBox="0 0 16 16">
+                        <path d="M14.5 0h-13c-0.825 0-1.5 0.675-1.5 1.5v13c0 0.825 0.675 1.5 1.5 1.5h6.5v-7h-2v-2h2v-1c0-1.653 1.347-3 3-3h2v2h-2c-0.55 0-1 0.45-1 1v1h3l-0.5 2h-2.5v7h4.5c0.825 0 1.5-0.675 1.5-1.5v-13c0-0.825-0.675-1.5-1.5-1.5z"></path>
+                        </svg></a></span>  
+                    <span><a href="#"><svg class="icon icon--big" version="1.1" viewBox="0 0 16 16">
+                        <path d="M14.5 0h-13c-0.825 0-1.5 0.675-1.5 1.5v13c0 0.825 0.675 1.5 1.5 1.5h13c0.825 0 1.5-0.675 1.5-1.5v-13c0-0.825-0.675-1.5-1.5-1.5zM12.959 11.2l-1.463 0.022c0 0-0.316 0.063-0.728-0.222-0.547-0.375-1.063-1.353-1.466-1.225-0.406 0.128-0.394 1.006-0.394 1.006s0.003 0.188-0.091 0.287c-0.1 0.109-0.3 0.131-0.3 0.131h-0.653c0 0-1.444 0.088-2.716-1.238-1.388-1.444-2.612-4.309-2.612-4.309s-0.072-0.188 0.006-0.278c0.087-0.103 0.322-0.109 0.322-0.109l1.566-0.009c0 0 0.147 0.025 0.253 0.103 0.088 0.063 0.134 0.184 0.134 0.184s0.253 0.641 0.588 1.219c0.653 1.128 0.959 1.375 1.181 1.256 0.322-0.175 0.225-1.597 0.225-1.597s0.006-0.516-0.162-0.744c-0.131-0.178-0.378-0.231-0.484-0.244-0.088-0.013 0.056-0.216 0.244-0.309 0.281-0.138 0.778-0.147 1.366-0.141 0.456 0.003 0.591 0.034 0.769 0.075 0.541 0.131 0.356 0.634 0.356 1.841 0 0.388-0.069 0.931 0.209 1.109 0.119 0.078 0.412 0.012 1.147-1.234 0.347-0.591 0.609-1.284 0.609-1.284s0.056-0.125 0.144-0.178c0.091-0.053 0.213-0.037 0.213-0.037l1.647-0.009c0 0 0.494-0.059 0.575 0.166 0.084 0.234-0.184 0.781-0.856 1.678-1.103 1.472-1.228 1.334-0.309 2.184 0.875 0.813 1.056 1.209 1.088 1.259 0.356 0.6-0.406 0.647-0.406 0.647z"></path>
+                        </svg></a></span>  
+                    <span><a href="#"><svg class="icon icon--big" version="1.1" viewBox="0 0 16 16">
+                        <path d="M14.5 0h-13c-0.825 0-1.5 0.675-1.5 1.5v13c0 0.825 0.675 1.5 1.5 1.5h13c0.825 0 1.5-0.675 1.5-1.5v-13c0-0.825-0.675-1.5-1.5-1.5zM11 2.5c0-0.275 0.225-0.5 0.5-0.5h2c0.275 0 0.5 0.225 0.5 0.5v2c0 0.275-0.225 0.5-0.5 0.5h-2c-0.275 0-0.5-0.225-0.5-0.5v-2zM8 5c1.656 0 3 1.344 3 3s-1.344 3-3 3c-1.656 0-3-1.344-3-3s1.344-3 3-3zM14 13.5v0c0 0.275-0.225 0.5-0.5 0.5h-11c-0.275 0-0.5-0.225-0.5-0.5v0-6.5h1.1c-0.066 0.322-0.1 0.656-0.1 1 0 2.762 2.237 5 5 5s5-2.238 5-5c0-0.344-0.034-0.678-0.1-1h1.1v6.5z"></path>
+                        </svg></a></span>
+                </p>
+            </div>
+            <div class="footer__column footer__column--3">
+                <p>&copy; AM Videography</p>
+                <p>г. Санкт-Петербург, Россия</p>
+            </div>
+        </div>
+    </footer>
+
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

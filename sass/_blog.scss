@@ -18,6 +18,7 @@
 
         img {
             width: 100%;
+            height: auto;
         }
 
         &__info {
@@ -28,6 +29,10 @@
             box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
             transform: translate(0, -2.5rem);
             transition: all 0.2s;
+
+            p {
+                padding-top: .5rem;
+            }
 
             &:hover,
             &:active {

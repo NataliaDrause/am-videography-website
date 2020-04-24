@@ -17,7 +17,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    //background-color: $color-white;
     padding: 3rem 5rem;
     flex-wrap: wrap;
 
@@ -30,8 +29,6 @@
     }
 
     &__logo {
-        //display: flex;
-        //align-items: start;
         padding-right: 2rem;
         img {
             display: block;
@@ -49,17 +46,20 @@
         align-items: center;
         height: 5rem;
         position: relative; ///////// this line is for DROPDOWN MENU
-        //min-width: 40rem;
     }
     &__nav-item {
         list-style: none;
         padding: 0 1rem;
         position: relative; ///////// this line is for DROPDOWN MENU
 
-        &:hover > .dropdown,
-        &:active > .dropdown {
-            display: block;
+        /* HOVER TO WORK ONLY ON NOT MOBILE */
+        @media only screen and (min-width: $bp-medium) {
+            &:hover > .dropdown,
+            &:active > .dropdown {
+                display: block;
+            }
         }
+        
     }
     &__nav-link:link,
     &__nav-link:visited {
@@ -82,6 +82,7 @@
         color: $color-primary;
         transition: color .5s ease;
     }
+
 
     &__nav-link:before {
         transition: all .5s ease;
@@ -125,40 +126,8 @@
     bottom: -6px;
   }
 
-//////// DROPDOWN MENU ////////// 
-.dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    display: none;
 
-    .navbar__nav-item {
-        padding: .75rem 2rem;
-        width: 100%;
-        background-color: rgba(255, 255, 255, 1);
-        opacity: 0;
-        transform-origin: bottom;
-        animation: enter 0.2s ease forwards;
-
-        &:nth-child(1) {
-            padding-top: 1.5rem;
-        }
-
-        @for $n from 1 through 7 { //change this code if there are more items
-            &:nth-child(#{$n}) {
-                animation-duration: 0.2s + 0.1s * ($n - 1);
-                animation-delay: 0.1s * ($n - 1);
-            }
-        }
-    }
-
-    .navbar__nav-link:link,
-    .navbar__nav-link:visited {
-        font-size: 1.1rem;
-    }
-}
-
-////mobile menu
+/* MAIN MOBILE MENU */
 
 .navbar {
     
@@ -171,17 +140,6 @@
 }
 
 @media only screen and (max-width: $bp-medium) {
-
-    .drop-item span {
-        display: inline-block;
-        position: relative;
-        transition: transform .2s;
-    }
-
-    .drop-item:hover span {
-        padding-left: 0;
-        transform: rotate(90deg);
-    }
 
     .navbar {
 
@@ -240,7 +198,7 @@
         &__checkbox:checked ~ &__content &__nav {
             display: flex;
         }
-        //icon
+        // icon
         &__icon {
             position: relative;
             margin-top: 3.5rem;
@@ -284,19 +242,90 @@
         }
     }
 
-    // !!!!!!!!!!!!!!!change the code below for more main menu items
+    /* change the code below for more main menu items */
     @for $n from 1 through 6 { 
         .navbar__nav > .navbar__nav-item:nth-child(#{$n}) {
             animation-delay: 0.1s * ($n - 1);
         }
     }
 
-    //mobile submenu
+}
+
+/*/////// DROPDOWN MENU /////////*/ 
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+
+    .navbar__nav-item {
+        padding: .75rem 2rem;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 1);
+        opacity: 0;
+        transform-origin: bottom;
+        animation: enter 0.2s ease forwards;
+
+        &:nth-child(1) {
+            padding-top: 1.5rem;
+        }
+
+        /* change the code below for more main menu items */
+        @for $n from 1 through 7 {
+            &:nth-child(#{$n}) {
+                animation-duration: 0.2s + 0.1s * ($n - 1);
+                animation-delay: 0.1s * ($n - 1);
+            }
+        }
+    }
+
+    .navbar__nav-link:link,
+    .navbar__nav-link:visited {
+        font-size: 1.1rem;
+    }
+}
+
+/* DROPDOWN MENU FOR MOBILE */
+.sub-navbar__button {
+    display: none;
+}
+.sub-navbar__checkbox {
+    display: none;
+}
+
+@media only screen and (max-width: $bp-medium) {
+    .drop-item .drop-item-link {
+        display: none;
+    }
+
+    .sub-navbar__button {
+        display: inline;
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: $color-grey-dark;
+        text-transform: uppercase;
+    }
+
+    .hide-me {
+        display: none;
+    }
+
+    .sub-navbar__button span {
+        display: inline-block;
+        position: relative;
+        transition: transform .2s;
+    }
+
     .dropdown {
         position: relative;
         top: 0%;
         margin-top: 2rem;
         text-align: center;
+
+        .navbar__nav-link:link,
+        .navbar__nav-link:visited {
+            font-size: 1.4rem;
+    }
 
         .navbar__nav-item {
             background-color: $color-grey-light;
@@ -305,16 +334,26 @@
                 padding-top: .75rem;
             }
         }
-
-        .navbar__nav-link:link,
-        .navbar__nav-link:visited {
-            font-size: 1.4rem;
-        }
     }
 
+    /* functionality */
+    .sub-navbar__checkbox:checked ~ .dropdown {
+        display: block;
+    }
+    /* icon */
+    .sub-navbar__icon {
+        display: inline-block;
+        position: relative;
+        transition: transform .2s;
+    }
+
+    .sub-navbar__checkbox:checked + .sub-navbar__button .sub-navbar__icon {
+        padding-left: 0;
+        transform: rotate(90deg);
+    }
 }
 
-////menu animation
+/* menu animation */
 @keyframes enter {
     from {
       opacity: 0;

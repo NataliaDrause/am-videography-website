@@ -1,6 +1,5 @@
 .blog-page {
-    margin: 14rem auto;
-    display: grid;
+    margin: 14rem auto 0 auto;
     
     &__featured-img {
         height: 0;
@@ -21,9 +20,6 @@
 
     &__body {
         margin-top: 5rem;
-        // display: grid;
-        // grid-template-columns: 2fr 1fr;
-        // gap: 5rem;
     }
 
     &__content {
@@ -36,12 +32,6 @@
             p {
                 padding-right: 3rem;
             }
-        }
-
-        
+        }  
     }
-
-    // &__sidebar {
-    //     width: 100%;
-    // }
 }

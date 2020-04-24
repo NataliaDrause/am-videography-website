@@ -1,10 +1,20 @@
-//HEADINGS
+/* HEADINGS */
+h1 {
+  font-weight: 500;
+  font-size: 3.5rem;
+  line-height: 1.5;
+  letter-spacing: 0.06rem;
+  color: $color-grey-dark;
+  padding-top: 2rem;
+}
+
 h2 {
     font-weight: 500;
     font-size: 3rem;
     line-height: 1.5;
     letter-spacing: 0.06rem;
     color: $color-grey-dark;
+    padding-top: 2rem;
 }
 
 h3 {
@@ -12,6 +22,7 @@ h3 {
     font-size: 2.2rem;
     line-height: 1.5;
     letter-spacing: 0.04rem; 
+    padding-top: 2rem;
 }
 
 .h3--dark {
@@ -20,7 +31,31 @@ h3 {
 
 .h3--light {
     color: $color-white;
-    //text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+h4 {
+  padding-top: 2rem;
+}
+
+blockquote {
+  position: relative;
+  padding-left: 1em;
+  margin-top: 2rem;
+  border-left: 0.2em solid lighten($color-grey-dark, 20%);
+  color: lighten($color-grey-dark, 10%);
+  font-style: italic;
+  font-weight: 300;
+  
+  cite {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4rem;
+  }
+  
+  p {
+    padding-top: .5rem;
+    padding-bottom: .4rem;
+  }
 }
 
 a:link,
@@ -48,13 +83,12 @@ p {
 
 .date {
     font-weight: normal;
-    //font-size: 1.2rem;
     padding-top: 1.5rem;
     font-weight: 300;
     font-style: italic;
 }
 
-// TEXT SELECTION
+/* TEXT SELECTION */
 
 *::-moz-selection { /* Code for Firefox */
   background: rgba($color-primary, .8);
@@ -64,8 +98,8 @@ p {
   background: rgba($color-primary, .8);
 }
 
-//BUTTONS
-//=== Button styling
+/* BUTTONS */
+/* === Button styling */
 
 .btn {
     background: none;
@@ -102,7 +136,7 @@ p {
     letter-spacing: 0.02rem;
 }
 
-  //=== Drawing effect
+  /* === Drawing effect */
 @mixin btn-border-drawing($color: #ccc, $hover: black, $width: 2px, $vertical: top, $horizontal: left, $duration: 0.25s) {
     box-shadow: inset 0 0 0 $width $color;
     color: $color;

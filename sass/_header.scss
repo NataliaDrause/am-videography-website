@@ -3,13 +3,13 @@
     width: 100%;
     margin-top: 8rem;
     overflow: hidden;
-    //position: relative;
+  /* Change background address in php into background-image: url("img/main.jpg") */
     background-image: url("/img/main.jpg");
     background-size: cover;
     background-position: center;
 
     @media only screen and (max-width: $bp-medium) {
-        background-position: 20% 100%;
+        background-position: 20% -8rem;
     }
 
     /* Create the parallax scrolling effect */
@@ -17,22 +17,17 @@
     background-repeat: no-repeat;
 
     /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
-    @media only screen and (max-device-width: 1200px) {
-        .header {
+    @media only screen and (max-width: $bp-medium) {
         background-attachment: scroll;
-        }
     }
     
     &__title {
         max-width: 80rem;
-        //height: 50rem;
         margin: 0 auto;
         position: relative;
-        //padding: 0 15rem;
         top: 45%;
 
         @media only screen and (max-width: $bp-small) {
-            //margin-right: 3rem;
             display: flex;
             flex-direction: column;
             top: 40%;
