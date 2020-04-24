@@ -30,7 +30,13 @@
                 <ul class="navbar__nav">
                     <li class="navbar__nav-item"><a href="index.html"class="navbar__nav-link underline-left">Главная</a></li>
                     <li class="navbar__nav-item"><a href="#"class="navbar__nav-link underline-left">Обо мне</a></li>
-                    <li class="navbar__nav-item drop-item"><a href="#"class="navbar__nav-link underline-left">Портфолио<span>&nbsp; &nbsp;</span><span>&#10095;</span></a>
+                    <li class="navbar__nav-item drop-item">
+                        <a href="javascript:void(0)"class="navbar__nav-link drop-item-link underline-left">Портфолио<span>&nbsp; &nbsp;</span>
+                        </a>
+                        <input type="checkbox" class="sub-navbar__checkbox" id="sub-navi-toggle">
+                        <label for="sub-navi-toggle" class="sub-navbar__button">
+                            Портфолио<span>&nbsp; &nbsp;</span><span class="sub-navbar__icon">&#10095;</span>
+                        </label>
                         <ul class="dropdown">
                             <li class="navbar__nav-item"><a href="portfolio.html"class="navbar__nav-link">Свадьбы</a></li>
                             <li class="navbar__nav-item"><a href="portfolio.html"class="navbar__nav-link">Fashion видео</a></li>
@@ -52,7 +58,7 @@
     <div class="full-screen">
         <header class="header">
             <div class="header__title">
-                <h2 class="header__h2 digit--re">Anton Medvedev</h3>
+                <h2 class="header__h2 digit--re">Anton Medvedev</h2>
                 <h1 class="header__h1 digit">Video Production</h1>
             </div>
         </header>
@@ -84,36 +90,42 @@
                 <p>Съемка свадебного фильма в течении целого дня: утро невесты, регистрация, прогулка, банкет.</p>
                 <a class="featured__desc__link" href="#">Подробнее <span class="arr">&rarr;</span></a>
             </div>
-            <a class="featured__video__link digit--re" href="#">
-                <video class="myvideos myvideos--1" width="auto" height="auto">
-                    <source src="img/wedding-showreel-480.mp4" type="video/mp4" autoplay="true" muted="muted">
-                    Your browser does not support the video.
-                </video>
-            </a>
+            <div class="digit--re">
+                <a class="featured__video__link" href="#">
+                    <video class="myvideos myvideos--1" width="auto" height="auto">
+                        <source src="img/wedding-showreel-480.mp4" type="video/mp4" autoplay="true" muted="muted">
+                        Your browser does not support the video.
+                    </video>
+                </a>
+            </div>
             <div class="featured__desc featured__desc--2 digit--re">
                 <h3 class="h3--dark">Fashion видео</h3>
                 <hr>
                 <p>Производство стильных и высококачественных видео клипов в стиле fashion.</p>
                 <a class="featured__desc__link" href="#">Подробнее <span class="arr">&rarr;</span></a>
             </div>
-            <a class="featured__video__link digit" href="#">
-                <video class="myvideos myvideos--2" width="auto" height="auto">
-                    <source src="img/fashion-showreel-480.mp4" type="video/mp4">
-                    Your browser does not support the video.
-                </video>
-            </a>
+            <div class="digit">
+                <a class="featured__video__link" href="#">
+                    <video class="myvideos myvideos--2" width="auto" height="auto">
+                        <source src="img/fashion-showreel-480.mp4" type="video/mp4">
+                        Your browser does not support the video.
+                    </video>
+                </a>
+            </div>
             <div class="featured__desc featured__desc--3 digit">
                 <h3 class="h3--dark">Видеопортрет</h3>
                 <hr>
                 <p>Видео прогулки, лав стори, индивидуальные портретные видео ролики для ваших социальных сетей.</p>
                 <a class="featured__desc__link" href="#">Подробнее <span class="arr">&rarr;</span></a>
             </div>
-            <a class="featured__video__link digit--re" href="#">
-                <video class="myvideos myvideos--3" width="auto" height="auto">
-                    <source src="img/portrait-showreel-480.mp4" type="video/mp4">
-                    Your browser does not support the video.
-                </video>
-            </a>   
+            <div class="digit--re">
+                <a class="featured__video__link" href="#">
+                    <video class="myvideos myvideos--3" width="auto" height="auto">
+                        <source src="img/portrait-showreel-480.mp4" type="video/mp4">
+                        Your browser does not support the video.
+                    </video>
+                </a> 
+            </div>  
         </div>
         <!-- OTHER SPECIALTIES -->
         <h2 class="digit--re">А также...</h2>
