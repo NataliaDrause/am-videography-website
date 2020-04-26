@@ -257,6 +257,8 @@ body {
   /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */ }
   @media only screen and (max-width: 50em) {
     .header {
+      height: 90vh;
+      margin-top: 4rem;
       background-position: 20% -8rem; } }
   @media only screen and (max-width: 50em) {
     .header {
@@ -770,7 +772,7 @@ body {
       grid-column: 2 / 3;
       grid-row: 1 / 2;
       transform: translate(-10%, 15%); }
-      @media only screen and (max-width: 37.5em) {
+      @media only screen and (max-width: 50em) {
         .specialties__featured .myvideos--1 {
           width: 100%;
           transform: translate(0, 0); } }
@@ -779,7 +781,7 @@ body {
       grid-column: 1 / 2;
       grid-row: 2 / 3;
       transform: translate(3%, 1%); }
-      @media only screen and (max-width: 37.5em) {
+      @media only screen and (max-width: 50em) {
         .specialties__featured .myvideos--2 {
           width: 100%;
           transform: translate(0, 0); } }
@@ -788,7 +790,7 @@ body {
       grid-column: 2 / 3;
       grid-row: 3 / 4;
       transform: translate(-5%, -16%); }
-      @media only screen and (max-width: 37.5em) {
+      @media only screen and (max-width: 50em) {
         .specialties__featured .myvideos--3 {
           width: 100%;
           transform: translate(0, 0); } }
@@ -816,8 +818,8 @@ body {
       .specialties__other figure img {
         position: relative;
         display: block;
-        min-height: 100%;
-        max-width: 100%; }
+        height: 100%;
+        width: 100%; }
       .specialties__other figure figcaption {
         padding: 1rem;
         -webkit-backface-visibility: hidden;

@@ -9,6 +9,8 @@
     background-position: center;
 
     @media only screen and (max-width: $bp-medium) {
+        height: 90vh;
+        margin-top: 4rem;
         background-position: 20% -8rem;
     }
 

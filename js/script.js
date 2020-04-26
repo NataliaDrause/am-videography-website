@@ -9,27 +9,27 @@ $(window).scroll(function() {
   }
 });
 
-//PLAY VIDEO WHEN IN VIEWPORT
-$(window).scroll(function() {
-  $(".myvideos").each(function() {
-      if ($(this).visible()) {
-          $(this)[0].play();
-      } else {
-          $(this)[0].pause();
-      }
-  });
-});
+// PLAY VIDEO WHEN IN VIEWPORT CONDITIONAL
+function playVideo(x) {
+  if (x.matches) { // for mobile
+    jQuery(".myvideos").attr('controls',true);
+    jQuery(".myvideos").attr('autoplay',true);
+    jQuery(".myvideos").attr('loop',true);
+  } else { //for desktop
+    jQuery(window).scroll(function() {
+      jQuery(".myvideos").each(function() {
+        if (jQuery(this).visible()) {
+              jQuery(this)[0].play();
+          } else {
+              jQuery(this)[0].pause();
+          }
+      });
+    });
+  }
+}
 
-//PLAY VIDEO WHEN HOVER
-// $(document).ready(function() {
-//    $(".myvideos").on("mouseover", function(event) {
-//      this.play();
- 
-//    }).on('mouseout', function(event) {
-//      this.pause();
- 
-//    });
-//  });
+var x = window.matchMedia("(max-width: 700px)");
+playVideo(x);
 
  //REVEAL ON SCROLL
  // init controller
